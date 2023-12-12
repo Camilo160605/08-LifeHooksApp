@@ -1,3 +1,13 @@
-<p>product works!</p>
-
-<products-price />
+<h1>LifeHooks en angular :)</h1>
+<hr>
+<products-price *ngIf="isProductVisible" 
+[price]="currentPrice" /> 
+<hr>
+<div>
+    <button (click)=" isProductVisible = !isProductVisible "  class="btn btn-primary"> Toggle</button>
+    <button  class="btn btn-primary m-2" (click)="increasePrice()" > +1 price </button>
+    <p
+    *ngIf="isProductVisible" >
+        El botton está activo
+   </p>
+</div>
